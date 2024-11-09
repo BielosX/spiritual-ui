@@ -1,0 +1,16 @@
+.SpiritualUiButton-base {
+  border-radius: var(--radius);
+  border: none;
+  padding: var(--padding);
+  margin: var(--margin);
+}
+
+.SpiritualUiButton-colorPrimary {
+  background-color: var(--color);
+  color: var(--text-color);
+}
+
+.SpiritualUiButton-colorSecondary {
+  background-color: var(--color);
+  color: var(--text-color);
+}
