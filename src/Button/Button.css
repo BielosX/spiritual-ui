@@ -1,16 +1,47 @@
+@import "properties.css";
+
 .SpiritualUiButton-base {
   border-radius: var(--radius);
   border: none;
   padding: var(--padding);
   margin: var(--margin);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.SpiritualUiButton-colorPrimary {
-  background-color: var(--color);
-  color: var(--text-color);
+.SpiritualUiButton-contained {
+  /*
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Nesting_selector
+   */
+  &.SpiritualUiButton-primary {
+    background-color: var(--primary-main-color);
+    color: var(--primary-contrast-color);
+    &:hover {
+      background-color: var(--primary-dark-color);
+    }
+  }
+  &.SpiritualUiButton-secondary {
+    background-color: var(--secondary-main-color);
+    color: var(--secondary-contrast-color);
+    &:hover {
+      background-color: var(--secondary-dark-color);
+    }
+  }
 }
 
-.SpiritualUiButton-colorSecondary {
-  background-color: var(--color);
-  color: var(--text-color);
+.SpiritualUiButton-text {
+  &.SpiritualUiButton-primary {
+    background-color: var(--primary-contrast-color);
+    color: var(--primary-main-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--primary-light-color), transparent 95%);
+    }
+  }
+  &.SpiritualUiButton-secondary {
+    background-color: var(--secondary-contrast-color);
+    color: var(--secondary-main-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--secondary-light-color), transparent 95%);
+    }
+  }
 }

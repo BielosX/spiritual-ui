@@ -1,12 +1,12 @@
 import { Button } from "./Button/Button.tsx";
-import { ButtonColor } from "./Button/ButtonProps.ts";
+import { ButtonColor, ButtonVariant } from "./Button/ButtonProps.ts";
 
 function App() {
   return (
     <>
-      <Button>Primary</Button>
-      <br />
-      <Button color={ButtonColor.Secondary}>Secondary</Button>
+      <Button color={ButtonColor.Primary} variant={ButtonVariant.Contained}>Primary</Button>
+      <Button color={ButtonColor.Secondary} variant={ButtonVariant.Contained}>Secondary</Button>
+      <Button color={ButtonColor.Primary} variant={ButtonVariant.Text}>Text</Button>
     </>
   );
 }

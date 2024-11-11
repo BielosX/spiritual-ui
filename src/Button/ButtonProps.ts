@@ -5,7 +5,14 @@ export enum ButtonColor {
   Secondary,
 }
 
+export enum ButtonVariant {
+  Text,
+  Outlined,
+  Contained,
+}
+
 export type ButtonProps = {
   children: ReactNode;
   color?: ButtonColor;
+  variant?: ButtonVariant;
 };
