@@ -1,39 +1,39 @@
 @property --primary-main-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --primary-dark-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --primary-light-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --primary-contrast-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --secondary-main-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --secondary-dark-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --secondary-light-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }
 
 @property --secondary-contrast-color {
-    syntax: "*";
-    inherits: false;
+  syntax: "*";
+  inherits: false;
 }

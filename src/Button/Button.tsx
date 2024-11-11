@@ -5,8 +5,8 @@ import { useThemeContext } from "../Theme/ThemeContext.ts";
 
 export const Button: FC<ButtonProps> = ({
   children,
-  color,
-  variant,
+  color = ButtonColor.Primary,
+  variant = ButtonVariant.Text,
   onClick,
 }) => {
   const { palette, spacing } = useThemeContext();
@@ -23,33 +23,11 @@ export const Button: FC<ButtonProps> = ({
     "--secondary-light-color": palette.secondary.light,
     "--secondary-contrast-color": palette.secondary.contrastText,
   } as CSSProperties;
-  const classes: Array<string> = ["SpiritualUiButton-base"];
-  switch (color) {
-    case ButtonColor.Primary: {
-      classes.push("SpiritualUiButton-primary");
-      break;
-    }
-    case ButtonColor.Secondary: {
-      classes.push("SpiritualUiButton-secondary");
-      break;
-    }
-    default:
-      classes.push("SpiritualUiButton-primary");
-      break;
-  }
-  switch (variant) {
-    case ButtonVariant.Contained: {
-      classes.push("SpiritualUiButton-contained");
-      break;
-    }
-    case ButtonVariant.Text: {
-      classes.push("SpiritualUiButton-text");
-      break;
-    }
-    default:
-      classes.push("SpiritualUiButton-text");
-      break;
-  }
+  const classes: Array<string> = [
+    "SpiritualUiButton-base",
+    `SpiritualUiButton-${color}`,
+    `SpiritualUiButton-${variant}`,
+  ];
   return (
     <button onClick={onClick} style={style} className={classes.join(" ")}>
       {children}

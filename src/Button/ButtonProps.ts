@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 
 export enum ButtonColor {
-  Primary,
-  Secondary,
+  Primary = "primary",
+  Secondary = "secondary",
 }
 
 export enum ButtonVariant {
-  Text,
-  Outlined,
-  Contained,
+  Text = "text",
+  Outlined = "outlined",
+  Contained = "contained",
 }
 
 export type ButtonProps = {
