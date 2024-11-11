@@ -4,9 +4,19 @@ import { ButtonColor, ButtonVariant } from "./Button/ButtonProps.ts";
 function App() {
   return (
     <>
-      <Button color={ButtonColor.Primary} variant={ButtonVariant.Contained}>Primary</Button>
-      <Button color={ButtonColor.Secondary} variant={ButtonVariant.Contained}>Secondary</Button>
-      <Button color={ButtonColor.Primary} variant={ButtonVariant.Text}>Text</Button>
+      <Button color={ButtonColor.Primary} variant={ButtonVariant.Contained}>
+        Primary
+      </Button>
+      <Button color={ButtonColor.Secondary} variant={ButtonVariant.Contained}>
+        Secondary
+      </Button>
+      <Button
+        onClick={() => console.log("Text")}
+        color={ButtonColor.Primary}
+        variant={ButtonVariant.Text}
+      >
+        Text
+      </Button>
     </>
   );
 }

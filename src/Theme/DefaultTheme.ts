@@ -13,7 +13,7 @@ export const DefaultTheme: ThemeContextProps = {
       main: "#9c27b0",
       dark: "#7b1fa2",
       contrastText: "#fff",
-    }
+    },
   },
   spacing: (value) => (value * 4).toString() + "px",
 };

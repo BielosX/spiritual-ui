@@ -15,4 +15,5 @@ export type ButtonProps = {
   children: ReactNode;
   color?: ButtonColor;
   variant?: ButtonVariant;
+  onClick?: () => void;
 };

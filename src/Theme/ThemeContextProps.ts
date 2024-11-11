@@ -11,7 +11,7 @@ export interface ThemeContextProps {
       light: string;
       dark: string;
       contrastText: string;
-    }
+    };
   };
   spacing: (value: number) => string;
 }

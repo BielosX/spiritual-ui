@@ -3,7 +3,12 @@ import "./Button.css";
 import { ButtonColor, ButtonProps, ButtonVariant } from "./ButtonProps.ts";
 import { useThemeContext } from "../Theme/ThemeContext.ts";
 
-export const Button: FC<ButtonProps> = ({ children, color, variant }) => {
+export const Button: FC<ButtonProps> = ({
+  children,
+  color,
+  variant,
+  onClick,
+}) => {
   const { palette, spacing } = useThemeContext();
   const style = {
     "--radius": spacing(1),
@@ -20,11 +25,11 @@ export const Button: FC<ButtonProps> = ({ children, color, variant }) => {
   } as CSSProperties;
   const classes: Array<string> = ["SpiritualUiButton-base"];
   switch (color) {
-    case (ButtonColor.Primary): {
+    case ButtonColor.Primary: {
       classes.push("SpiritualUiButton-primary");
       break;
     }
-    case (ButtonColor.Secondary): {
+    case ButtonColor.Secondary: {
       classes.push("SpiritualUiButton-secondary");
       break;
     }
@@ -33,11 +38,11 @@ export const Button: FC<ButtonProps> = ({ children, color, variant }) => {
       break;
   }
   switch (variant) {
-    case (ButtonVariant.Contained): {
+    case ButtonVariant.Contained: {
       classes.push("SpiritualUiButton-contained");
       break;
     }
-    case (ButtonVariant.Text): {
+    case ButtonVariant.Text: {
       classes.push("SpiritualUiButton-text");
       break;
     }
@@ -45,5 +50,9 @@ export const Button: FC<ButtonProps> = ({ children, color, variant }) => {
       classes.push("SpiritualUiButton-text");
       break;
   }
-  return <button style={style} className={classes.join(" ")}>{children}</button>;
+  return (
+    <button onClick={onClick} style={style} className={classes.join(" ")}>
+      {children}
+    </button>
+  );
 };
