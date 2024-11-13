@@ -35,25 +35,27 @@
   &.SpiritualUiButton-primary {
     background-color: var(--primary-contrast-color);
     color: var(--primary-main-color);
-    border: 1px solid var(--primary-main-color);
+    border: 1px solid var(--primary-light-color);
     &:hover {
       background-color: color-mix(
               in srgb,
               var(--primary-light-color),
               transparent 95%
       );
+      border: 1px solid var(--primary-main-color);
     }
   }
   &.SpiritualUiButton-secondary {
     background-color: var(--secondary-contrast-color);
     color: var(--secondary-main-color);
-    border: 1px solid var(--secondary-main-color);
+    border: 1px solid var(--secondary-light-color);
     &:hover {
       background-color: color-mix(
               in srgb,
               var(--secondary-light-color),
               transparent 95%
       );
+      border: 1px solid var(--secondary-main-color);
     }
   }
 }
