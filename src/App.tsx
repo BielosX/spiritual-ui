@@ -17,6 +17,12 @@ function App() {
       >
         Text
       </Button>
+      <Button color={ButtonColor.Primary} variant={ButtonVariant.Outlined}>
+        Outlined
+      </Button>
+      <Button color={ButtonColor.Secondary} variant={ButtonVariant.Outlined}>
+        Outlined
+      </Button>
     </>
   );
 }
