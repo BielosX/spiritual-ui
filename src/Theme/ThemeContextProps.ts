@@ -12,6 +12,9 @@ export interface ThemeContextProps {
       dark: string;
       contrastText: string;
     };
+    grey: {
+      700: string;
+    };
   };
   spacing: (value: number) => string;
 }

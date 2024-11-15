@@ -37,3 +37,8 @@
   syntax: "*";
   inherits: false;
 }
+
+@property --grey-700-color {
+  syntax: "*";
+  inherits: false;
+}

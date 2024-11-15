@@ -1,5 +1,7 @@
 import { Button } from "./Button/Button.tsx";
 import { ButtonColor, ButtonVariant } from "./Button/ButtonProps.ts";
+import { Checkbox } from "./Checkbox/Checkbox.tsx";
+import { CheckboxColor } from "./Checkbox/CheckboxProps.ts";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Button color={ButtonColor.Secondary} variant={ButtonVariant.Outlined}>
         Outlined
       </Button>
+      <Checkbox />
+      <Checkbox color={CheckboxColor.Secondary} checked={true} />
     </>
   );
 }

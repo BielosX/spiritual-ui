@@ -12,5 +12,6 @@ export const useCommonCssProperties: () => CSSProperties = () => {
     "--secondary-dark-color": palette.secondary.dark,
     "--secondary-light-color": palette.secondary.light,
     "--secondary-contrast-color": palette.secondary.contrastText,
+    "--grey-700-color": palette.grey["700"],
   } as CSSProperties;
 };

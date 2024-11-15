@@ -1,0 +1,27 @@
+@import "../common/properties.css";
+
+.SpiritualUiCheckbox-base {
+    appearance: none;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    border: 2px solid var(--grey-700-color);
+    border-radius: 4px;
+    &:checked {
+        background-repeat: no-repeat;
+        background-size: 80% 80%;
+        background-position: center;
+    }
+}
+
+.SpiritualUiCheckbox-primary {
+    &:checked {
+        background-image: linear-gradient(var(--primary-main-color), var(--primary-main-color));
+    }
+}
+
+.SpiritualUiCheckbox-secondary {
+    &:checked {
+        background-image: linear-gradient(var(--secondary-main-color), var(--secondary-main-color));
+    }
+}
