@@ -1,5 +1,14 @@
 @import "../common/properties.css";
 
+@keyframes innerBoxGrow {
+    0% {
+        background-size: 0 0;
+    }
+    100% {
+        background-size: 80% 80%;
+    }
+}
+
 .SpiritualUiCheckbox-base {
     appearance: none;
     width: 1.5em;
@@ -7,10 +16,12 @@
     display: inline-block;
     border: 2px solid var(--grey-700-color);
     border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
     &:checked {
-        background-repeat: no-repeat;
         background-size: 80% 80%;
-        background-position: center;
+        animation-name: innerBoxGrow;
+        animation-duration: 0.3s;
     }
 }
 
