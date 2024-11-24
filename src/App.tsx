@@ -2,6 +2,8 @@ import { Button } from "./Button/Button.tsx";
 import { ButtonColor, ButtonVariant } from "./Button/ButtonProps.ts";
 import { Checkbox } from "./Checkbox/Checkbox.tsx";
 import { CheckboxColor } from "./Checkbox/CheckboxProps.ts";
+import { List, ListItem, ListItemIcon, ListItemText } from "./List/List.tsx";
+import { ArrowCircleRightIcon } from "./icons/ArrowCircleRightIcon/ArrowCircleRightIcon.tsx";
 
 function App() {
   return (
@@ -27,6 +29,23 @@ function App() {
       </Button>
       <Checkbox />
       <Checkbox color={CheckboxColor.Secondary} checked={true} />
+      <List>
+        <ListItem>
+          <ListItemText>One</ListItemText>
+          <ListItemIcon>
+            <ArrowCircleRightIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem>
+          <ListItemText>Two</ListItemText>
+          <ListItemIcon>
+            <ArrowCircleRightIcon />
+          </ListItemIcon>
+        </ListItem>
+        <ListItem>
+          <ListItemText>Third Item</ListItemText>
+        </ListItem>
+      </List>
     </>
   );
 }
