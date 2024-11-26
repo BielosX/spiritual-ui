@@ -1,13 +1,14 @@
 import "./Modal.css";
 import { useThemeContext } from "../Theme/ThemeContext.ts";
-import { CSSProperties, FC } from "react";
+import { CSSProperties, FC, ReactNode } from "react";
 
 export type ModalProps = {
   open?: boolean;
   onBackdropClick?: () => void;
+  children?: ReactNode;
 };
 
-export const Modal: FC<ModalProps> = ({ open, onBackdropClick }) => {
+export const Modal: FC<ModalProps> = ({ open, onBackdropClick, children }) => {
   const { spacing } = useThemeContext();
   const style = {
     "--padding": spacing(2),
@@ -24,7 +25,7 @@ export const Modal: FC<ModalProps> = ({ open, onBackdropClick }) => {
         }
       }}
     >
-      <div className="SpiritualUiModal-base">Hello</div>
+      <div className="SpiritualUiModal-base">{children}</div>
     </div>
   );
 };

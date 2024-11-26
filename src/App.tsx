@@ -4,8 +4,8 @@ import { Checkbox } from "./Checkbox/Checkbox.tsx";
 import { CheckboxColor } from "./Checkbox/CheckboxProps.ts";
 import { List, ListItem, ListItemIcon, ListItemText } from "./List/List.tsx";
 import { ArrowCircleRightIcon } from "./icons/ArrowCircleRightIcon/ArrowCircleRightIcon.tsx";
-import { Modal } from "./Modal/Modal.tsx";
 import { useState } from "react";
+import { Dialog } from "./Dialog/Dialog.tsx";
 
 function App() {
   const [isModalOpened, setIsModalOpened] = useState(false);
@@ -56,10 +56,12 @@ function App() {
       >
         Open Modal
       </Button>
-      <Modal
+      <Dialog
         open={isModalOpened}
         onBackdropClick={() => setIsModalOpened(false)}
-      />
+      >
+        Hello
+      </Dialog>
     </>
   );
 }
