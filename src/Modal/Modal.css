@@ -32,7 +32,7 @@
   align-items: center;
   z-index: 1000;
   animation-name: backgroundFade;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
 }
 
 .SpiritualUiModal-base {
