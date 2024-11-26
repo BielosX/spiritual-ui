@@ -8,7 +8,7 @@ export type ListProps = {
 
 export type ListItemProps = {
   children: ReactElement[] | ReactElement;
-}
+};
 
 export type ListItemTextProps = {
   children: string;
@@ -18,38 +18,22 @@ export type ListItemIconProps = {
   children: ReactElement;
 };
 
-export const ListItemIcon: FC<ListItemIconProps> = ({children}) => {
-  return (
-    <div className="SpiritualUiListItemIcon-base">
-      {children}
-    </div>
-  );
-}
-
-export const ListItemText: FC<ListItemTextProps> = ({children}) => {
-  return (
-    <span>
-      {children}
-  </span>
-  );
+export const ListItemIcon: FC<ListItemIconProps> = ({ children }) => {
+  return <div className="SpiritualUiListItemIcon-base">{children}</div>;
 };
 
-export const ListItem: FC<ListItemProps> = ({children}) => {
-  return (
-    <li>
-    {children}
-  </li>
-  );
+export const ListItemText: FC<ListItemTextProps> = ({ children }) => {
+  return <span>{children}</span>;
 };
 
-export const List: FC<ListProps> = ({children}) => {
+export const ListItem: FC<ListItemProps> = ({ children }) => {
+  return <li>{children}</li>;
+};
+
+export const List: FC<ListProps> = ({ children }) => {
   const { spacing } = useThemeContext();
   const style = {
     "--icon-margin-right": spacing(1),
   } as CSSProperties;
-  return (
-    <ul style={style}>
-    {children}
-  </ul>
-  );
+  return <ul style={style}>{children}</ul>;
 };

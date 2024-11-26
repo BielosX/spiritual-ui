@@ -38,9 +38,9 @@
     border: 1px solid var(--primary-light-color);
     &:hover {
       background-color: color-mix(
-              in srgb,
-              var(--primary-light-color),
-              transparent 95%
+        in srgb,
+        var(--primary-light-color),
+        transparent 95%
       );
       border: 1px solid var(--primary-main-color);
     }
@@ -51,9 +51,9 @@
     border: 1px solid var(--secondary-light-color);
     &:hover {
       background-color: color-mix(
-              in srgb,
-              var(--secondary-light-color),
-              transparent 95%
+        in srgb,
+        var(--secondary-light-color),
+        transparent 95%
       );
       border: 1px solid var(--secondary-main-color);
     }

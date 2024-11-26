@@ -1,35 +1,35 @@
 @property --icon-margin-right {
-    syntax: "*";
-    inherits: true;
+  syntax: "*";
+  inherits: true;
 }
 
 ul {
-    li {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
-        &::marker {
-            content: none;
-        }
-
-        span {
-            display: inline-block;
-            order: 1;
-        }
-
-        .SpiritualUiListItemIcon-base {
-            display: inline-block;
-            padding: 0;
-            order: 0;
-            margin-right: var(--icon-margin-right);
-
-            svg {
-                display: block;
-                height: 1rem;
-                width: auto;
-            }
-        }
+    &::marker {
+      content: none;
     }
+
+    span {
+      display: inline-block;
+      order: 1;
+    }
+
+    .SpiritualUiListItemIcon-base {
+      display: inline-block;
+      padding: 0;
+      order: 0;
+      margin-right: var(--icon-margin-right);
+
+      svg {
+        display: block;
+        height: 1rem;
+        width: auto;
+      }
+    }
+  }
 }

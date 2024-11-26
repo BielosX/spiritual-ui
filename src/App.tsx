@@ -4,8 +4,11 @@ import { Checkbox } from "./Checkbox/Checkbox.tsx";
 import { CheckboxColor } from "./Checkbox/CheckboxProps.ts";
 import { List, ListItem, ListItemIcon, ListItemText } from "./List/List.tsx";
 import { ArrowCircleRightIcon } from "./icons/ArrowCircleRightIcon/ArrowCircleRightIcon.tsx";
+import { Modal } from "./Modal/Modal.tsx";
+import { useState } from "react";
 
 function App() {
+  const [isModalOpened, setIsModalOpened] = useState(false);
   return (
     <>
       <Button color={ButtonColor.Primary} variant={ButtonVariant.Contained}>
@@ -46,6 +49,17 @@ function App() {
           <ListItemText>Third Item</ListItemText>
         </ListItem>
       </List>
+      <Button
+        color={ButtonColor.Primary}
+        onClick={() => setIsModalOpened(true)}
+        variant={ButtonVariant.Outlined}
+      >
+        Open Modal
+      </Button>
+      <Modal
+        open={isModalOpened}
+        onBackdropClick={() => setIsModalOpened(false)}
+      />
     </>
   );
 }

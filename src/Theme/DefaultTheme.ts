@@ -15,8 +15,8 @@ export const DefaultTheme: ThemeContextProps = {
       contrastText: "#fff",
     },
     grey: {
-      700: "#616161"
-    }
+      700: "#616161",
+    },
   },
   spacing: (value) => (value * 4).toString() + "px",
 };
